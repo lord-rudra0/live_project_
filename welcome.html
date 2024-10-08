@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Career Guidance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>Welcome, <span id="username-display"></span>!</h2>
+        <p>We're here to help you find the best career path.</p>
+        <a href="questions.html" class="start-btn">Start the Questionnaire</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        document.getElementById('username-display').textContent = username;
+    </script>
+</body>
+</html>
