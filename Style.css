@@ -1,0 +1,140 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.left {
+  display: flex;
+  flex: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.right {
+  display: flex;
+  flex: 30%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 180px;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #101820ff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+p {
+  text-align: center;
+  color: #777;
+  font-family: "Arial", sans-serif;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-family: "Arial", sans-serif;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  width: 100%;
+}
+
+.signupbtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bottom label {
+  display: inline-block;
+}
+
+.right img {
+  width: 60%;
+  height: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .right img {
+    width: 100%;
+  }
+}
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
