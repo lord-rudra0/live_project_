@@ -3,54 +3,62 @@
 .test-container {
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
   text-align: center;
 }
-  
-  .test-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-  
-  .test-category {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #7f00ff;
-    padding-bottom: 5px;
-  }
-  
-  .test-questions {
-    list-style-type: decimal;
-    margin: 0;
-    padding-left: 20px;
-  }
-  
-  .test-question {
-    margin: 20px 0;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .test-question button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .test-question button:hover {
-    background-color: #0056b3;
-  }
+
+.test-category {
+  font-size: 1.8rem;
+  color: #4b0082;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #4b0082;
+  padding-bottom: 10px;
+}
+
+.test-question {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.options-container {
+  margin: 20px 0;
+}
+
+.option-button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #4b0082;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #4b0082;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #4b0082;
+  color: #ffffff;
+}
+
+.next-button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #4b0082;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #371b66;
+}
