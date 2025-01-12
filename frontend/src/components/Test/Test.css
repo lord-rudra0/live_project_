@@ -1,0 +1,46 @@
+/* Test.css */
+
+.test-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .test-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .test-category {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #7f00ff;
+    padding-bottom: 5px;
+  }
+  
+  .test-questions {
+    list-style-type: decimal;
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .test-question {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .test-question:hover {
+    color: #7f00ff;
+    cursor: pointer;
+  }
+  

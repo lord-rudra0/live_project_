@@ -1,0 +1,62 @@
+/* General Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 1rem;
+    background: #f9fafb;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+/* Title and Highlight Styling */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(to right, #6366f1, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Description Styling */
+.hero-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+/* Button Styling */
+.hero-button {
+    background-image: linear-gradient(to right, #7f00ff, #e100ff); /* Updated gradient */
+    color: white; /* White text for better contrast */
+    font-weight: 600; /* Bold text */
+    padding: 8px 16px; /* Matching padding */
+    border-radius: 9999px; /* Fully rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .hero-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+
+.hero-button .arrow {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
