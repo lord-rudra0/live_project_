@@ -5,6 +5,7 @@ const Test = () => {
   const [questions, setQuestions] = useState([]);
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   // Fetch questions on component mount
   useEffect(() => {
@@ -28,14 +29,20 @@ const Test = () => {
     // Check if there are more questions in the current category
     if (nextQuestionIndex < currentCategory.questions.length) {
       setCurrentQuestionIndex(nextQuestionIndex);
+      setSelectedOption(null); // Reset selected option
     } else if (currentCategoryIndex + 1 < questions.length) {
       // Move to the next category
       setCurrentCategoryIndex(currentCategoryIndex + 1);
       setCurrentQuestionIndex(0);
+      setSelectedOption(null); // Reset selected option
     } else {
       // All questions complete
       alert("You have completed all the questions!");
     }
+  };
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
   };
 
   if (!questions.length) {
@@ -48,8 +55,31 @@ const Test = () => {
   return (
     <div className="test-container">
       <h2 className="test-category">{currentCategory.category}</h2>
-      <p className="test-question">{currentQuestion.text}</p>
-      <button onClick={handleNextQuestion} className="next-button">
+      <p className="test-question" style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+        {currentQuestion.text}
+      </p>
+
+      <div className="options-container" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+        {currentQuestion.options.map((option, index) => (
+          <button
+            key={index}
+            className={`option-button ${
+              selectedOption === option ? "selected" : ""
+            }`}
+            onClick={() => handleOptionSelect(option)}
+            style={{ width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+
+      <button
+        onClick={handleNextQuestion}
+        className="next-button"
+        disabled={!selectedOption}
+        style={{ marginTop: "20px" }}
+      >
         Next Question
       </button>
     </div>

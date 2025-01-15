@@ -1,4 +1,3 @@
-/* General Hero Section Styles */
 .hero {
     display: flex;
     align-items: center;
@@ -16,47 +15,89 @@
 .hero-title {
     font-size: 3rem;
     font-weight: 800;
+    font-family: 'Poppins', sans-serif;
     color: #1f2937;
     margin-bottom: 1.5rem;
 }
 
 .hero-title .highlight {
-    background: linear-gradient(to right, #6366f1, #7c3aed);
+    background: linear-gradient(90deg, #6366f1, #7c3aed);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 /* Description Styling */
 .hero-description {
     font-size: 1.125rem;
     color: #4b5563;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.8;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 /* Button Styling */
 .hero-button {
-    background-image: linear-gradient(to right, #7f00ff, #e100ff); /* Updated gradient */
-    color: white; /* White text for better contrast */
-    font-weight: 600; /* Bold text */
-    padding: 8px 16px; /* Matching padding */
-    border-radius: 9999px; /* Fully rounded corners */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+    background-image: linear-gradient(to right, #7f00ff, #e100ff);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border: none;
     cursor: pointer;
     text-decoration: none;
-  }
-  
-  .hero-button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
+    animation: pulse 2s infinite;
+}
+
+.hero-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
 
 .hero-button .arrow {
     margin-left: 0.5rem;
     font-size: 1.2rem;
+}
+
+/* Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+.portal-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+    transform: translateY(20px);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
 }
