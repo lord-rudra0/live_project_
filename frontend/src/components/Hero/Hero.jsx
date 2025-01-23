@@ -16,7 +16,7 @@ const Hero = () => {
           Get Started <span className="arrow">→</span>
         </Link>
       </div>
-      <img src="https://unsplash.com/photos/a-row-of-light-bulbs-with-a-mans-head-in-the-middle-bPPGBNqAorg" alt="Portal Image" className="portal-image" />
+      {/* <img src="https://unsplash.com/photos/a-row-of-light-bulbs-with-a-mans-head-in-the-middle-bPPGBNqAorg" alt="Portal Image" className="portal-image" /> */}
     </section>
   );
 };
