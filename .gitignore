@@ -1,0 +1,6 @@
+#ignore .vscode folder
+.vscode/
+
+#ignore venv folder
+venv/
+
