@@ -16,7 +16,8 @@ metadata = db.MetaData()
 # Create table
 
 table = db.Table('users', metadata,
-    db.Column('name', db.String(255)),
+    db.Column('first_name', db.String(255)),
+    db.Column('last_name', db.String(255)),
     db.Column('email', db.String(255), primary_key=True),
     db.Column('password', db.String(255))
 )
@@ -25,7 +26,8 @@ table = db.Table('users', metadata,
 def insert():
     data = request.get_json()
     query = db.insert(table).values(
-        name=data['name'],
+        first_name=data['first_name'],
+        last_name=data['last_name'],
         email=data['email'],
         password=bycript.generate_password_hash(data['password']).decode('utf-8'),
         is_Valid=bycript.check_password_hash(data['check_password'], data['password'])     
@@ -52,8 +54,11 @@ def signin():
 def update():
     data = request.get_json()
     query = db.update(table).where(table.columns.email == data['email']).values(
-        name=data['name'],
-        password=data['password']
+        first_name=data['first_name'],
+        last_name=data['last_name'],
+        email=data['email'],
+        password=bycript.generate_password_hash(data['password']).decode('utf-8'),
+        is_Valid=bycript.check_password_hash(data['check_password'], data['password'])
     )
     ResultProxy = connection.execute(query)
     return jsonify({'message': 'success'})
