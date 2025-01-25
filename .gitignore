@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ignore .vscode folder
 .vscode/
 
@@ -9,3 +10,24 @@ venv/
 
 
 
+=======
+# Node modules
+node_modules/
+
+# Build output
+build/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+>>>>>>> 907de22 (Add gitignore)
