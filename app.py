@@ -81,6 +81,10 @@ def forget_password():
     else:
         return jsonify({'message': 'failed'})
     
+    
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
     
     
